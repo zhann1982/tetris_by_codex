@@ -1,6 +1,7 @@
 # Pure JavaScript Tetris
 
-A classic Tetris game built entirely with pure JavaScript, HTML, and CSS.
+A classic Tetris game built with pure JavaScript, HTML, and CSS.
+Generated totally by Codex app on windows. ChatGPT 5.4 was used.
 
 ## Description
 
