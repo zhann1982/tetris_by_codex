@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure JS Tetris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="panel hero">
+      <p class="eyebrow">Arcade Build</p>
+      <h1>Pure JavaScript Tetris</h1>
+      <p class="lede">
+        Stack pieces, clear rows, and keep the board alive as the speed ramps up.
+      </p>
+      <div class="controls">
+        <span><kbd>&larr;</kbd><kbd>&rarr;</kbd> Move</span>
+        <span><kbd>&uarr;</kbd> Rotate</span>
+        <span><kbd>&darr;</kbd> Soft drop</span>
+        <span><kbd>Space</kbd> Hard drop</span>
+        <span><kbd>P</kbd> Pause</span>
+      </div>
+      <button id="restartButton" class="restart-button" type="button">Restart Game</button>
+    </section>
+
+    <section class="game-shell">
+      <div class="panel board-panel">
+        <canvas id="board" width="300" height="600" aria-label="Tetris game board"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <h2 id="overlayTitle">Paused</h2>
+          <p id="overlayText">Press P to continue.</p>
+        </div>
+      </div>
+
+      <aside class="panel sidebar">
+        <div class="stat">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Lines</span>
+          <strong id="lines">0</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Level</span>
+          <strong id="level">1</strong>
+        </div>
+        <div class="next-wrap">
+          <span class="label">Next</span>
+          <canvas id="next" width="120" height="120" aria-label="Next Tetris piece preview"></canvas>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
